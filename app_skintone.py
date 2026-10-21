@@ -540,7 +540,7 @@ with tab_prediksi:
     m = st.columns(5)
     m[0].metric("Subjek", n)
     for i, k in enumerate(KATEGORI):
-        m[i + 1].metric(k, f"{jml[k] / n * 100:.1f}%")
+        m[i + 1].metric(k, f"{jml[k]/n*100:.1f}%")
     m[4].metric("L di luar rentang latih", f"{df_new['L_di_luar_rentang_latih'].mean() * 100:.1f}%")
 
     st.markdown("#### Undertone di bidang a*–b*")
