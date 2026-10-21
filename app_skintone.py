@@ -1,17 +1,3 @@
-"""
-Skintone Mapping — klasifikasi undertone (C/N/W) + leveling lightness.
-
-Jalankan:
-    pip install -r requirements.txt
-    streamlit run app_skintone.py
-
-Metode sama persis dengan notebook:
-- Undertone : Decision Tree 1 fitur (3 daun) pada
-              (a) Hue = atan2(b*, a*)            -> notebook _UPDATE__ColorMapping_Hue
-              (b) skor = cos(θ)·a* + sin(θ)·b*,  θ diputar 0–360° tiap 0,5°
-                                                  -> notebook _UPDATE__ColorMapping_Komb_Linear
-- Level     : metode median L, satu model per undertone (2,5 -> 2, 3,5 -> 3)
-"""
 import io
 import re
 from pathlib import Path
